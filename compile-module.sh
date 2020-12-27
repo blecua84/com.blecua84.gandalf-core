@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 rm -rf out
-javac -d out --module-source-path src --module gandalf.core
+mkdir -p out/gandalf.core
+javac -d out/gandalf.core \
+   src/main/gandalf.core/module-info.java \
+   src/main/gandalf.core/com/blecua84/gandalf/core/Main.java
